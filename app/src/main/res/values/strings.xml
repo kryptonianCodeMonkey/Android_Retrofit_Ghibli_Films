@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Retrofit</string>
+    <string name="alttext">AltText:</string>
+    <string name="title">Title:</string>
+    <string name="select_a_studio_ghibli_film">Select a Studio Ghibli Film:</string>
+</resources>
