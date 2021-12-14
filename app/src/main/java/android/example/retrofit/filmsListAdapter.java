@@ -11,16 +11,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.LinkedList;
 
 public class filmsListAdapter extends
-        RecyclerView.Adapter<filmsListAdapter.WordViewHolder>{
+        RecyclerView.Adapter<filmsListAdapter.FilmViewHolder>{
 
     private final LinkedList<String> films;
     private final LayoutInflater mInflater;
 
-    class WordViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    class FilmViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public final TextView filmItemView;
         final filmsListAdapter mAdapter;
 
-        public WordViewHolder(View itemView, filmsListAdapter adapter) {
+        public FilmViewHolder(View itemView, filmsListAdapter adapter) {
             super(itemView);
             filmItemView = itemView.findViewById(R.id.film);
             this.mAdapter = adapter;
@@ -46,13 +46,13 @@ public class filmsListAdapter extends
     }
 
     @Override
-    public filmsListAdapter.WordViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public filmsListAdapter.FilmViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View mItemView = mInflater.inflate(R.layout.filmlist_item, parent, false);
-        return new WordViewHolder(mItemView, this);
+        return new FilmViewHolder(mItemView, this);
     }
 
     @Override
-    public void onBindViewHolder(filmsListAdapter.WordViewHolder holder,
+    public void onBindViewHolder(filmsListAdapter.FilmViewHolder holder,
                                  int position) {
         String mCurrent = films.get(position);
         holder.filmItemView.setText(mCurrent);

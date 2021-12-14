@@ -6,8 +6,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.LinkedList;
@@ -33,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void getComics() {
-        Call<List<Results>> call = RetrofitClient.getInstance().getMyApi().getGhibliFilms();
-        call.enqueue(new Callback<List<Results>>() {
+        Call<List<Title_Results>> call = RetrofitClient.getInstance().getMyApi().getGhibliFilms();
+        call.enqueue(new Callback<List<Title_Results>>() {
             @Override
-            public void onResponse(Call<List<Results>> call, Response<List<Results>> response) {
-                List<Results> myFilmList = response.body();
+            public void onResponse(Call<List<Title_Results>> call, Response<List<Title_Results>> response) {
+                List<Title_Results> myFilmList = response.body();
 
                 for (int i = 0; i < myFilmList.size(); i++) {
                     films.add(myFilmList.get(i).getName());
@@ -48,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<List<Results>> call, Throwable t) {
+            public void onFailure(Call<List<Title_Results>> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), "An Error Has Occurred", Toast.LENGTH_LONG).show();
                 Log.d("MainActivity", "Failure to respond: " + t.getMessage());
             }

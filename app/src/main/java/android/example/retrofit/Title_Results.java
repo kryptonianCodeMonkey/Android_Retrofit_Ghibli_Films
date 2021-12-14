@@ -2,13 +2,13 @@ package android.example.retrofit;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Results {
+public class Title_Results {
 
     @SerializedName("title")
     private String filmName;
 
 
-    public Results(String name) {
+    public Title_Results(String name) {
         this.filmName = name;
     }
 
