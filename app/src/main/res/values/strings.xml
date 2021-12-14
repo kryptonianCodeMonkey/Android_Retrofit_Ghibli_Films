@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Retrofit</string>
-    <string name="alttext">AltText:</string>
-    <string name="title">Title:</string>
     <string name="select_a_studio_ghibli_film">Select a Studio Ghibli Film:</string>
+    <string name="directed_by">Directed By:</string>
+    <string name="release">Release:</string>
+    <string name="director_s_name">Director\'s Name</string>
+    <string name="release_date">Release Date</string>
+    <string name="english_title_here">English Title Here</string>
+    <string name="japanese_title_here">Japanese Title Here</string>
+    <string name="kanji_title_here">Kanji Title Here</string>
+    <string name="description_text">Description Text</string>
 </resources>
