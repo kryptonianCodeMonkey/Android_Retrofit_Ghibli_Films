@@ -1,6 +1,7 @@
 package android.example.retrofit;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ public class filmsListAdapter extends
 
     private final LinkedList<String> films;
     private final LayoutInflater mInflater;
+    private final Context mContext;
 
     class FilmViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public final TextView filmItemView;
@@ -41,7 +43,8 @@ public class filmsListAdapter extends
     }
 
     public filmsListAdapter(Context context, LinkedList<String> wordList) {
-        mInflater = LayoutInflater.from(context);
+        this.mContext = context;
+        this.mInflater = LayoutInflater.from(context);
         this.films = wordList;
     }
 

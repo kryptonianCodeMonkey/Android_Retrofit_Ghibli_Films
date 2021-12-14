@@ -9,7 +9,5 @@ public interface Api {
 
     String BASE_URL = "https://ghibliapi.herokuapp.com";
     @GET("films")
-    Call<List<Title_Results>> getGhibliFilms();
-    @GET("films")
     Call<List<Detailed_Results>> getFilmDetails();
 }

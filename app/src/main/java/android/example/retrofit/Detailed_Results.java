@@ -39,7 +39,7 @@ public class Detailed_Results {
     }
 
     public String[] getDetails() {
-        String all[] = {filmName, kanjiTitle, japaneseTitle, imageURL, description, director, release_date};
+        String all[] = {filmName, japaneseTitle, kanjiTitle, imageURL, description, director, release_date};
         return all;
     }
 }
