@@ -8,11 +8,11 @@ public class Title_Results {
     private String filmName;
 
 
-    public Title_Results(String name) {
-        this.filmName = name;
+    public Title_Results(String title) {
+        this.filmName = title;
     }
 
-    public String getName() {
+    public String getTitle() {
         return filmName;
     }
 }
